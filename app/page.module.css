@@ -1,55 +1,70 @@
-/* page.module.css */
+/* app/page.module.css */
 
 .main {
   margin: 0;
-  background-color: black;
+  background-color: #333; /* dark grey background */
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
   display: flex;
   justify-content: space-between; /* left and right */
-  align-items: center; /* vertically center */
+  align-items: center; /* vertical center */
   padding: 0 5%;
 }
 
-.left-content {
+.leftContent {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.left-content h1 {
+.leftContent h1 {
   font-size: 3em;
   margin-bottom: 20px;
 }
 
-.social-buttons a {
-  display: inline-block;
+.socialButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialButtons button {
   margin: 5px 0;
   padding: 10px 20px;
+  background-color: #555;
   color: white;
-  background-color: #333;
-  text-decoration: none;
+  border: none;
   border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.social-buttons a:hover {
-  background-color: #555;
+.socialButtons button:hover {
+  background-color: #777;
 }
 
-.profile-photo {
+.profilePhoto {
   border-radius: 10px;
 }
 
-/* Optional: make photo-container work on small screens */
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
     text-align: center;
   }
-  .left-content, .photo-container {
+  .leftContent, .photoContainer {
     margin-bottom: 20px;
     align-items: center;
   }
+}
+
+/* Ensure no white margins and full dark background */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #333; /* same as your .main background */
+  color: white;
+  height: 100%;
+  width: 100%;
 }
