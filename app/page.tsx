@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.leftContent}>
+        <div class="flex flex-col gap-1"><div class="font-bold text-5xl lg:text-7xl text-slate-700 dark:text-slate-100 tracking-tight">Gian Handa</div><div class="font-semibold text-xl lg:text-3xl text-slate-500 dark:text-slate-400 tracking-tight">STEM @ SWHS</div></div>
         <h1>Gian Handa</h1>
         <div className={styles.socialButtons}>
           <button onClick={() => window.open('https://github.com/yourusername', '_blank')}>
@@ -26,7 +27,7 @@ export default function Home() {
           src="/gianhanda.jpg" // photo in public folder
           alt="Gian Handa"
           width={300}
-          height={300}
+          height={375}
           className={styles.profilePhoto}
         />
       </div>
